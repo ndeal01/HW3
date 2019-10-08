@@ -2,8 +2,27 @@
 
 {% block body %}
 
-      <h2> This is my Flask server </h2>
+      <h2> Loan Payment Calculator </h2>
 
-      <img src="{{ url_for('static', filename='images/flask.jpg') }}" />
+      <form  method="post">
+        <table>
+          <tr>
+            <td> Loan Amount (A): </td> <td> <input type="text" name="loanamount" /> </td>
+          </tr>
+          <tr>
+            <td> Number of periodic payments (n): </td> <td> <input type="text" name="numpayments" /> </td>
+          </tr>
+          <tr>
+            <td> Periodic interest rate (i): </td> <td> <input type="text" name="intrate" /> </td>
+          </tr>
+          <tr>
+            <td> Discount Factor (D): </td> <td> <input type="text" name="discfactor" /> </td>
+          </tr>
+        </table>
+          <br>
+        <input class="button" type="submit" formaction="/add" value="Add them!" />
+      </form>
 
+      <p> {{ display }} </p>
+      <div style="clear:both;"></div>
 {% endblock %}

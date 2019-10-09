@@ -5,23 +5,20 @@
       <form  method="post">
         <table>
           <tr>
-            <td> Loan amount (A): </td> <td> <input type="text" name="A" /> </td>
+            <td> Loan amount (A): </td> <td> <input type="text" name="loan" /> </td>
           </tr>
           <tr>
-            <td> Payments per year (p): </td> <td> <input type="text" name="p" /> </td>
+            <td> Payments per year (p): </td> <td> <input type="text" name="payments" /> </td>
           </tr>
           <tr>
-            <td> Number of years (y): </td> <td> <input type="text" name="y" /> </td>
+            <td> Number of years (y): </td> <td> <input type="text" name="years" /> </td>
           </tr>
           <tr>
-            <td> Annual rate (r): </td> <td> <input type="text" name="r" /> </td>
-          </tr>
-          <tr>
-            <td> Number of payment periods (f): </td> <td> <input type="text" name="f" /> </td>
+            <td> Annual rate (r): </td> <td> <input type="text" name="rate" /> </td>
           </tr>
         </table>
           <br>
-        <input class="button" type="submit" formaction="/calc" value="Calculate Loan" />
+        <input class="button" type="submit" formaction="/payment" value="Calculate Loan" />
       </form>
 
       <p> {{ display }} </p>
